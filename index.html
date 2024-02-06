@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      body {
+        background-color: rgb(145, 164, 179);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        width: 40vw;
+        border-radius: 5px;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      form > h1 {
+        color: rgba(0, 0, 0, 0.644);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.644);
+        width: 10vw;
+        text-align: center;
+        padding-bottom: 1vmax;
+      }
+
+      form > input {
+        padding: 1vmax;
+        width: 30vw;
+        outline: none;
+        font-size: 1.3vmax;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+
+      form > input[type='submit'] {
+        width: 20vw;
+        border: none;
+        cursor: pointer;
+        background-color: #eb4034;
+        color: #fff;
+        font-size: 1.4vmax;
+        transition: all 0.5s;
+      }
+
+      form > input[type='submit']:hover {
+        background-color: #c4342a;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/api/v1/register" method="post">
+      <h1>LOGIN</h1>
+      <input type="text" name="name" id="name" placeholder="Enter Your Name" />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter Your Email"
+      />
+      <input type="submit" value="login" />
+    </form>
+  </body>
+</html>
